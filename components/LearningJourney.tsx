@@ -1,4 +1,5 @@
-import { BookOpen, Briefcase, FileSpreadsheet, Laptop, MessageSquare, Users } from "lucide-react"
+import { BookOpen, Briefcase, FileSpreadsheet, Laptop, MessageSquare, Users } from "lucide-react";
+import Image from "next/image";
 
 export default function LearningJourney() {
   return (
@@ -51,10 +52,12 @@ export default function LearningJourney() {
       {/* Center Image */}
       <div className="relative z-10 flex justify-center mb-12">
         <div className="w-64 h-32 bg-gradient-to-b from-purple-500 to-cyan-500 rounded-[100%]">
-          <img
+          <Image
             src="https://i.ibb.co/GkdLvGY/image.png"
             alt="Students"
             className="w-full h-full object-cover rounded-t-[100%]"
+            width={256} 
+            height={256} 
           />
         </div>
       </div>
@@ -125,7 +128,6 @@ export default function LearningJourney() {
         ))}
       </div>
 
-    
       <div className="absolute right-4 top-1/2 transform -translate-y-1/2 space-y-2">
         {[...Array(3)].map((_, i) => (
           <div
@@ -135,5 +137,5 @@ export default function LearningJourney() {
         ))}
       </div>
     </div>
-  )
+  );
 }

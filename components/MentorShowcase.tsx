@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface Mentor {
   name: string;
@@ -14,10 +15,11 @@ const MentorCard: React.FC<Mentor> = ({ name, designation, college, description,
     {/* Image Container */}
     <div className="w-full h-full relative">
       {/* Mentor Image */}
-      <img 
+      <Image 
         src={image} 
         alt={name}
-        className="w-full h-full object-cover"
+        layout="fill" 
+        objectFit="cover" 
       />
       
       {/* Name Overlay at Top */}

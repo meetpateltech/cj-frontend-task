@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function FeatureSection() {
   const features = [
     {
@@ -54,10 +56,12 @@ export default function FeatureSection() {
               className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-transform hover:scale-105"
             >
               <div className="mb-4 flex justify-center">
-                <img
+                <Image
                   src={feature.icon}
-                  alt=""
-                  className="h-14 w-14 rounded-lg object-cover"
+                  alt={feature.title}
+                  width={72} 
+                  height={72} 
+                  className="rounded-lg object-cover"
                 />
               </div>
               <h3 className="mb-2 text-center text-xl font-semibold text-blue-600">

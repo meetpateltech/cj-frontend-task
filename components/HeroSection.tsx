@@ -1,23 +1,24 @@
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { GraduationCap, Building2, MapPin, BookOpen } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { GraduationCap, Building2, MapPin, BookOpen } from "lucide-react";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
         <div className="relative">
-          <img
+          <Image
             src="https://i.ibb.co/RQ6cx2z/image.png"
             alt="Desktop Monitor"
             className="w-full"
-            width={600}
-            height={600}
+            width={600} 
+            height={600} 
+            layout="responsive" 
           />
         </div>
 
         <div className="space-y-8">
-        
           <div className="relative">
             <h1 className="text-4xl font-bold leading-tight text-[#2D4356] md:text-5xl lg:text-6xl">
               Where The World <br />
@@ -111,7 +112,6 @@ export default function HeroSection() {
             </Card>
           </div>
 
-    
           <div className="absolute bottom-0 right-0 hidden lg:block">
             <div className="flex gap-1">
               {[...Array(10)].map((_, i) => (
@@ -122,5 +122,5 @@ export default function HeroSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from 'next/image';
 
 export default function ProgramSection() {
   return (
@@ -43,16 +44,18 @@ export default function ProgramSection() {
             <CardContent className="p-0">
               <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/3">
-                  <img
+                  <Image
                     src="https://i.ibb.co/BnJFrXC/image.png"
                     alt="Campus Training"
                     className="w-full h-64 md:h-full object-cover"
+                    width={400} 
+                    height={256} 
                   />
                 </div>
                 <div className="p-6 md:p-8 flex-1">
                   <h3 className="text-2xl font-bold mb-2">Campus Training</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    For students| 24+ Modules | 10 instructors
+                    For students | 24+ Modules | 10 instructors
                   </p>
                   <p className="mb-6 text-muted-foreground">
                     The app features in-app coding, eliminating the need for laptops. With cloud-based virtual machines and labs, students can practice freely, cutting hardware and maintenance costs.
@@ -83,16 +86,18 @@ export default function ProgramSection() {
             <CardContent className="p-0">
               <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/3">
-                  <img
+                  <Image
                     src="https://i.ibb.co/cF4CPw2/image.png"
                     alt="Professional Training"
                     className="w-full h-64 md:h-full object-cover"
+                    width={400} 
+                    height={256} 
                   />
                 </div>
                 <div className="p-6 md:p-8 flex-1">
                   <h3 className="text-2xl font-bold mb-2">Professional Training</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    For Professionals| 24+ Modules | 10 instructors
+                    For Professionals | 24+ Modules | 10 instructors
                   </p>
                   <p className="mb-6 text-muted-foreground">
                     The app features in-app coding, eliminating the need for laptops. With cloud-based virtual machines and labs, students can practice freely, cutting hardware and maintenance costs.
@@ -120,5 +125,5 @@ export default function ProgramSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

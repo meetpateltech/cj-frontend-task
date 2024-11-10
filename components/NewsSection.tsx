@@ -1,22 +1,25 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface NewsCardProps {
-    source: string;
-    date: string;
-    image: string;
-    title: string;
-    link: string;
-  }
+  source: string;
+  date: string;
+  image: string;
+  title: string;
+  link: string;
+}
 
-  const NewsCard: React.FC<NewsCardProps> = ({ source, date, image, title, link }) => (
+const NewsCard: React.FC<NewsCardProps> = ({ source, date, image, title, link }) => (
   <div className="bg-white rounded-lg shadow-lg p-4 transition-transform duration-300 hover:scale-105">
     <div className="flex justify-between items-center mb-4">
       <span className="text-orange-600 font-bold">{source}</span>
       <span className="text-gray-500 text-sm">{date}</span>
     </div>
-    <img 
+    <Image 
       src={image} 
       alt={title}
+      width={400} 
+      height={192} 
       className="w-full h-48 object-cover rounded-lg mb-4"
     />
     <h3 className="text-gray-800 text-lg font-medium mb-4 line-clamp-2">
@@ -76,11 +79,9 @@ const NewsSection = () => {
       </h2>
       
       <div className="relative">
-    
         <div className="absolute -top-8 -left-8 w-24 h-24 border-t-2 border-l-2 border-blue-200 rounded-tl-full" />
         <div className="absolute -bottom-8 -right-8 w-24 h-24 border-b-2 border-r-2 border-blue-200 rounded-br-full" />
         
-    
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {newsItems.map((item, index) => (
             <NewsCard key={index} {...item} />

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const TestimonialSlider = () => {
   const testimonials = [
@@ -39,7 +40,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold text-center text-black mb-12">
+      <h2 className="text-4xl font-bold text-center text-white mb-12">
         And Our Students Agree...
       </h2>
 
@@ -50,16 +51,18 @@ const TestimonialSlider = () => {
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
                 <div className="flex flex-col items-center text-center">
-                  <img
+                  <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mb-4"
+                    width={48} 
+                    height={48} 
                   />
-                  <blockquote className="text-lg text-black mb-4">
-                    &apos;{testimonial.content}&apos;
+                  <blockquote className="text-lg text-gray-200 mb-4">
+                  &apos;{testimonial.content}&apos;
                   </blockquote>
                   <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-black">{testimonial.name}</h3>
+                    <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
                     <p className="text-blue-300">{testimonial.role}</p>
                   </div>
                 </div>

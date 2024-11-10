@@ -39,7 +39,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold text-center text-white mb-12">
+      <h2 className="text-4xl font-bold text-center text-black mb-12">
         And Our Students Agree...
       </h2>
 
@@ -55,11 +55,11 @@ const TestimonialSlider = () => {
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mb-4"
                   />
-                  <blockquote className="text-lg text-gray-200 mb-4">
-                  &apos;{testimonial.content}&apos;
+                  <blockquote className="text-lg text-black mb-4">
+                    &apos;{testimonial.content}&apos;
                   </blockquote>
                   <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
+                    <h3 className="text-xl font-semibold text-black">{testimonial.name}</h3>
                     <p className="text-blue-300">{testimonial.role}</p>
                   </div>
                 </div>

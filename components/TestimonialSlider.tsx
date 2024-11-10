@@ -40,7 +40,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold text-center text-white mb-12">
+      <h2 className="text-4xl font-bold text-center text-black mb-12">
         And Our Students Agree...
       </h2>
 
@@ -58,12 +58,12 @@ const TestimonialSlider = () => {
                     width={48} 
                     height={48} 
                   />
-                  <blockquote className="text-lg text-gray-200 mb-4">
-                  &apos;{testimonial.content}&apos;
+                  <blockquote className="text-lg text-black mb-4">
+                    &apos;{testimonial.content}&apos;
                   </blockquote>
                   <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
-                    <p className="text-blue-300">{testimonial.role}</p>
+                    <h3 className="text-xl font-semibold text-black">{testimonial.name}</h3>
+                    <p className="text-black">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
@@ -75,14 +75,14 @@ const TestimonialSlider = () => {
           onClick={prevSlide}
           className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/20 hover:bg-white/30 rounded-full p-2 backdrop-blur-sm transition-all"
         >
-          <ChevronLeft className="w-6 h-6 text-white" />
+          <ChevronLeft className="w-6 h-6 text-black" />
         </button>
 
         <button
           onClick={nextSlide}
           className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/20 hover:bg-white/30 rounded-full p-2 backdrop-blur-sm transition-all"
         >
-          <ChevronRight className="w-6 h-6 text-white" />
+          <ChevronRight className="w-6 h-6 text-black" />
         </button>
 
         <div className="flex justify-center mt-6 gap-2">
@@ -91,7 +91,7 @@ const TestimonialSlider = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-2 h-2 rounded-full transition-all ${
-                currentSlide === index ? 'bg-white scale-125' : 'bg-white/50'
+                currentSlide === index ? 'bg-black scale-125' : 'bg-black/50'
               }`}
             />
           ))}
